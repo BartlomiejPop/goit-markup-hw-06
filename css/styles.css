@@ -31,6 +31,9 @@ svg {
     vertical-align: middle;
 }
 
+.no-decoration {
+    text-decoration: none;
+}
 /* header */
 
 .container {
@@ -508,6 +511,7 @@ footer a,
 .wrapper {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     list-style: none;
 }
@@ -543,8 +547,57 @@ footer a,
     border-radius: 50%;
 }
 
-.no-decoration {
-    text-decoration: none;
+.newsletter {
+    margin-left: 78px;
+}
+
+.newsletter-quote {
+    padding-top: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+.newsletter-form {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    gap: 12px;
+}
+
+.newsletter-text {
+    padding-left: 16px;
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    color: var(--white-color);
+    background-color: var(--dark-grey-background);
+}
+
+.newsletter-button {
+    padding: 10px 76px 10px 42px;
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    color: var(--white-color);
+    background-color: var(--hover-color);
+}
+
+.newsletter-icon {
+    position: absolute;
+    top: 13px;
+    left: 518px;
+    fill: var(--white-color);
 }
 
 /* portfolio */
@@ -684,7 +737,7 @@ footer a,
 
 .modal {
     position: absolute;
-    height: 581px;
+    height: 598px;
     width: 528px;
     left: 50%;
     top: 50%;
@@ -716,11 +769,130 @@ footer a,
 }
 
 .modal-quote {
+    margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.13;
     text-align: center;
     letter-spacing: 0.03em;
+    color: var(--text-color);
+}
+
+.field {
+    position: relative;
+    margin-top: 10px;
+}
+
+.modal-input:focus,
+.modal-input:hover {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border-color: var(--hover-color);
+}
+
+.modal-input:focus + .modal-icon,
+.modal-input:hover + .modal-icon {
+    fill: var(--hover-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-textarea:focus,
+.modal-textarea:hover {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border-color: var(--hover-color);
+}
+
+.licence-adjust {
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+    padding: 0 14px;
+    gap: 7px;
+}
+
+.modal-label,
+.modal-textarea {
+    font-size: 12px;
+    line-height: 1.18;
+    letter-spacing: 0.01em;
+    color: var(--white-grey-text);
+}
+
+.modal-input {
+    margin-top: 4px;
+    padding: 9.5px 15px 9.5px 42px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.modal-textarea {
+    margin-top: 4px;
+    padding: 12px 16px;
+    height: 120px;
+    width: 448px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    resize: none;
+}
+
+.modal-icon {
+    position: absolute;
+    top: 43px;
+    right: 407px;
+    transform: translate(-50%, -50%);
+}
+
+.modal-icon-acceptation {
+    position: absolute;
+    top: 5px;
+    visibility: hidden;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-checkbox {
+    margin-top: 5px;
+    width: 16px;
+    height: 15px;
+}
+
+.form-checkbox:checked + .modal-icon-acceptation {
+    visibility: visible;
+}
+
+.licence-acceptation-text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--white-grey-text);
+}
+
+.licence-acceptation-text > a {
+    color: var(--hover-color);
+}
+
+.modal-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 30px 124px 0px 124px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--team-presentation);
+    background-color: var(--hover-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 }
 
 @keyframes modalAppear {
