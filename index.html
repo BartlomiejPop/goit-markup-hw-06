@@ -573,21 +573,25 @@
                                     placeholder="Wprowadź tekst"
                                 ></textarea>
                             </div>
-                            <di v class="licence-adjust">
+
+                            <label class="form-licence-acceptation">
                                 <input
-                                    class="form-checkbox"
+                                    class="hidden-checkbox"
                                     type="checkbox"
                                     name="licence-acceptation"
                                     required
                                 />
-                                <svg class="modal-icon-acceptation" width="16" height="15">
-                                    <use href="images/icons.svg#icon-icon-check"></use>
-                                </svg>
+                                <div class="custom-checkbox">
+                                    <svg class="custom-checkbox-img" width="16" height="16">
+                                        <use href="images/icons.svg#icon-icon-check"></use>
+                                    </svg>
+                                </div>
                                 <p class="licence-acceptation-text">
                                     Oświadczam iż akceptuję <a href="#">Regulamin</a> i
                                     <a href="#">Politykę Prywatności.</a>
                                 </p>
-                            </div>
+                            </label>
+
                             <button class="modal-button" type="submit">Wyślij</button>
                         </div>
                     </form>

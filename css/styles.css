@@ -806,12 +806,12 @@ footer a,
     border-color: var(--hover-color);
 }
 
-.licence-adjust {
+.form-licence-acceptation {
     position: relative;
-    display: flex;
     margin-top: 20px;
     padding: 0 14px;
-    gap: 7px;
+    display: flex;
+    align-items: center;
 }
 
 .modal-label,
@@ -847,24 +847,38 @@ footer a,
     transform: translate(-50%, -50%);
 }
 
-.modal-icon-acceptation {
-    position: absolute;
-    top: 5px;
-    visibility: hidden;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-checkbox {
-    margin-top: 5px;
+.custom-checkbox {
     width: 16px;
     height: 15px;
+    border: var(--text-color) 2px solid;
+    border-radius: 1px;
 }
 
-.form-checkbox:checked + .modal-icon-acceptation {
-    visibility: visible;
+.custom-checkbox-img {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    right: 418px;
+    bottom: 4px;
+}
+
+.custom-checkbox:hover {
+    cursor: pointer;
+}
+
+.hidden-checkbox {
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    display: none;
+}
+
+.hidden-checkbox:checked + .custom-checkbox > .custom-checkbox-img {
+    opacity: 1;
 }
 
 .licence-acceptation-text {
+    margin-left: 8px;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
