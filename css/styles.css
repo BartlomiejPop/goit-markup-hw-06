@@ -788,13 +788,14 @@ footer a,
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     border-color: var(--hover-color);
+    outline: none;
 }
 
-.modal-input:focus + .modal-icon,
-.modal-input:hover + .modal-icon {
+.modal-input:focus + .modal-icon {
     fill: var(--hover-color);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
 }
 
 .modal-textarea:focus {
@@ -802,6 +803,7 @@ footer a,
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     border-color: var(--hover-color);
+    outline: none;
 }
 
 .form-licence-acceptation {
